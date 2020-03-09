@@ -8,14 +8,14 @@ use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
-class ImportData extends Command
+class ImportLegacy extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'import:data';
+    protected $signature = 'import:legacy';
 
     /**
      * The console command description.
