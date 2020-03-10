@@ -48,7 +48,7 @@ class ImportLegacy extends Command
         }
 
         $max_date = null;
-        $choice = 3;
+        $choice = 2;
 
         $max_id = DB::table('speeds')->max('id');
 
@@ -81,7 +81,7 @@ class ImportLegacy extends Command
         }
 
         // Empty speeds table if requested
-        if ($choice == 2) {
+        if ($choice == 2 && $max_id > 0) {
             $this->info("Clearing speeds table. 🗑");
             DB::table("speeds")->truncate();
         }
