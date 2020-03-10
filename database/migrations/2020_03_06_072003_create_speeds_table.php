@@ -17,7 +17,7 @@ class CreateSpeedsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('asn_id');
             $table->unsignedDecimal('average_speed', 16, 12);
-            $table->unsignedDecimal('data', 12, 4)->nullable();
+            $table->unsignedDecimal('data', 16, 5)->nullable();
             $table->timestamps();
 
             $table->index(['asn_id', 'average_speed', 'data']);
