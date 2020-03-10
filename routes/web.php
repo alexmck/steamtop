@@ -13,4 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('', 'PageController@index')->name('index');
+Route::get('', 'CountryController@index')->name('index');
+Route::get('country/{country}', 'CountryController@index');
+Route::get('country/{country}/{days}', 'CountryController@index');
