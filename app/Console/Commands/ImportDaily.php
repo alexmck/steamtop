@@ -44,7 +44,7 @@ class ImportDaily extends Command
 
         $date = Carbon::parse(Carbon::now())->format('m-d-Y'); // Month-Day-Year
 
-        $response = Http::get('https://steamcdn-a.akamaihd.net/steam/publicstats/top_asns_per_country.jsonp?v=' . $date . '-05');
+        $response = Http::get('https://steamcdn-a.akamaihd.net/steam/publicstats/top_asns_per_country.jsonp?v=' . md5($date));
 
         $body = substr(str_replace('jsonpFetch.onCountryASNData(', '', $response->body()), 0, -2);
 

@@ -29,6 +29,8 @@
 
     </div>
 
+    {{--Powered by flushdns.net in collaboration with SomeGen Industries - Coded by Christopher "Big Brain" Koob - Last generated at Tue Mar 10 15:30:02 ACDT 2020 using data from steampowered.com--}}
+
 @yield('script')
 
 </body>
