@@ -42,7 +42,7 @@ class ImportDaily extends Command
     public function handle()
     {
 
-        $date = Carbon::parse(Carbon::now())->format('m-d-Y'); // Month-Day-Year
+        $date = Carbon::parse(Carbon::now())->format('d-m-Y'); // Day-Month-Year
 
         $response = Http::get('https://steamcdn-a.akamaihd.net/steam/publicstats/top_asns_per_country.jsonp?v=' . md5($date));
 
